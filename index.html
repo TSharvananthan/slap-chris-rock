@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="title" content="Slap Chris Rock">
+    <meta name="description" content="Remember that time when Will Smith slapped Chris Rock? Remake that experience with this website.">
+    <meta name="keywords" content="Jada Pinkett Smith,Jada Pinkett Smith chris rock,chris rock,chris rock oscars,chris rock will smith,film,full video will smith chris rock,gi jane 2,gi jane joke,guardian,oscars,oscars 2022,oscars 2022 will smith chris rock,uncensored,will smith,will smith chris rock,will smith hits chris rock,will smith oscars,will smith punches chris rock,will smith slaps chris rock,will smith smacks chris rock,jada pinkett smith hair loss,will smith slap,will smith punch">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="3 days">
+
+    <title>Slap Chris Rock</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+
+  <body>
+    <header class="text-center animate__animated animate__fadeInDown">
+      <h1 class="title">slap chris rock</h1>
+      <h3 class="subtitle">
+        &quot;It's like
+        <a href="http://eelslap.com/" target="_blank">Eel Slap!</a>... but a
+        <i>whole lot worse</i>&quot;
+      </h3>
+    </header>
+
+    <div class="container animate__animated animate__fadeIn">
+      <img src="frames/1.png" id="slap" />
+    </div>
+
+    <footer class="text-center animate__animated animate__fadeInUp">
+      <h3>slowly move your mouse from right to left across the screen and slap chris rock</h3>
+    </footer>
+  </body>
+
+  <script type="text/javascript">
+    document.onmousemove = handleMouseMove;
+    function handleMouseMove(event) {
+        let imageNum = 40 - Math.round(event.pageX / 48);
+        let currentImage = `frames/${imageNum}.png`
+        setTimeout(() => { document.getElementById("slap").src = currentImage; }, 250)
+    }
+  </script>
+</html>
