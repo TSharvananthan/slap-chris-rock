@@ -9,6 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
     <meta name="revisit-after" content="3 days">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Slap Chris Rock</title>
     <link rel="stylesheet" href="index.css" />
@@ -26,20 +27,24 @@
     </header>
 
     <div class="container animate__animated animate__fadeIn">
-      <img src="frames/1.png" id="slap" />
+      <div class="image">
+        <img src="frames/ragdoll.jpg" id="slap" width="52480" height="680" draggable="false" />
+      </div>
     </div>
-
-    <footer class="text-center animate__animated animate__fadeInUp">
-      <h3>slowly move your mouse from right to left across the screen and slap chris rock</h3>
-    </footer>
   </body>
 
   <script type="text/javascript">
     document.onmousemove = handleMouseMove;
+
+    let imageElement = document.getElementById("slap");
+
     function handleMouseMove(event) {
-        let imageNum = 40 - Math.round(event.pageX / 48);
-        let currentImage = `frames/${imageNum}.png`
-        setTimeout(() => { document.getElementById("slap").src = currentImage; }, 250)
+        let pageWidth = document.documentElement.clientWidth;
+        let dividingFactor = pageWidth / 40;
+        let imageNum = 40 - Math.round(event.pageX / dividingFactor);
+        setTimeout(() => {
+          imageElement.style.left = `${imageNum * -1280}px`;
+        }, 100)
     }
   </script>
 </html>
